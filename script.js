@@ -104,8 +104,19 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Function to display methods and types
     function displayData(data) {
+        // Display version info
+        displayVersionInfo(data);
+
         displayMethods(data.methods);
         displayTypes(data.types);
+    }
+
+    // Function to display version info
+    function displayVersionInfo(data) {
+        const versionInfoElement = document.getElementById('version-info');
+        if (data.version && data.release_date && data.changelog) {
+            versionInfoElement.innerHTML = `${data.version} (${data.release_date}) - <a href="${data.changelog}" target="_blank">Changelog</a>`;
+        }
     }
 
     // Function to display methods
