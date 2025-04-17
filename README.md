@@ -9,3 +9,5 @@ You can access the docs via the Telegram Mini App: https://t.me/aio3bot/docs
 
 99.9% of the code was written by [JetBrains Junie](https://www.jetbrains.com/junie/). 
 I just made a few tweaks and added some prompts. Vibe coding!
+
+JSON-version of Bot API docs was taken from https://github.com/PaulSonOfLars/telegram-bot-api-spec repo. Thanks, Paul!
