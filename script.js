@@ -250,10 +250,10 @@ document.addEventListener('DOMContentLoaded', function() {
         itemDiv.appendChild(nameElement);
         itemDiv.appendChild(descElement);
 
-        // Add click event to toggle expanded state
+        // Add click event to toggle expanded state (on the entire item except for the description)
         itemDiv.addEventListener('click', function(event) {
-            // Prevent the click from triggering if the link was clicked
-            if (event.target.tagName === 'A') {
+            // Prevent the click from triggering if the link was clicked or if clicked on description
+            if (event.target.tagName === 'A' || descElement.contains(event.target)) {
                 event.stopPropagation();
                 return;
             }
