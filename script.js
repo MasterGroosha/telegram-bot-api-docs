@@ -79,8 +79,8 @@ document.addEventListener('DOMContentLoaded', function() {
         return luminance < 0.5;
     }
 
-    // Fetch the API JSON data
-    fetch('api.json')
+    // Fetch the API JSON data from remote URL
+    fetch('https://raw.githubusercontent.com/PaulSonOfLars/telegram-bot-api-spec/refs/heads/main/api.min.json')
         .then(response => {
             if (!response.ok) {
                 throw new Error('Network response was not ok');
